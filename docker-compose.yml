@@ -18,7 +18,7 @@ services:
       - my-network
    
   kanban-app:
-    image: chandanshankar/kanban:${TAG}
+    image: chandanshankar/kanban-backend:${TAG}
     build:
       context: ./kanban-app
       dockerfile: Dockerfile
@@ -38,7 +38,7 @@ services:
       - my-network
     
   kanban-ui:
-    image: chandanshankar/kanban:${TAG}
+    image: chandanshankar/kanban-frontend:${TAG}
     container_name: kanban_frontrend
     build: ./kanban-ui
     ports:
